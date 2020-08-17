@@ -1,4 +1,4 @@
-name = "Advanced Combat Environment 0.0.0";
+name = "Advanced Combat Environment: Legion 0.0.0";
 picture = "logo_ace3_ca.paa";
 actionName = "GitHub";
 action = "https://github.com/acemod/ACE3";
