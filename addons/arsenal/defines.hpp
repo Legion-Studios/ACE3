@@ -79,7 +79,7 @@
 #define IDC_iconBackgroundVoice 2034
 #define IDC_buttonVoice 2035
 #define IDC_iconBackgroundInsigna 2036
-#define IDC_buttonInsigna 2037
+#define IDC_buttonInsignia 2037
 #define IDC_iconBackgroundOptic 21
 #define IDC_buttonOptic 22
 #define IDC_iconBackgroundItemAcc 23
@@ -198,9 +198,6 @@
         private _dlcName = _this call GETDLC;\
         if (_dlcName != "") then {\
             _ctrlPanel lbsetpictureright [_lbAdd,(modParams [_dlcName,["logo"]]) param [0,""]];\
-            _modID = GVAR(modList) find _dlcName;\
-            if (_modID < 0) then {_modID = GVAR(modList) pushback _dlcName;};\
-            _ctrlPanel lbsetvalue [_lbAdd,_modID];\
         };\
     };
 
