@@ -118,5 +118,33 @@
             <Spanish>Solo jugadores</Spanish>
             <Turkish>Sadece Oyuncular</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Blood_OilEnabled_DisplayName">
+            <English>Droid Oil Effects</English>
+            <Japanese>ドロイド石油の効果</Japanese>
+            <French>Effets de l'huile Droid</French>
+            <Russian>Эффекты масла дроидов</Russian>
+            <Portuguese>Efeitos do óleo droid</Portuguese>
+            <Chinese>机器人油效果</Chinese>
+            <Italian>Effetti dell'olio di droide</Italian>
+            <Czech>Droid Oil Effects</Czech>
+            <Polish>Efekty oleju dla droidów</Polish>
+            <Spanish>Efectos del aceite de droide</Spanish>
+            <Turkish>Droid Yağ Etkileri</Turkish>
+            <German>Droidenöl-Effekte</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_Blood_OilEnabled_Description">
+            <English>Controls the display of droid oil effects</English>
+            <Japanese>ドロイド油効果の表示を制御します。</Japanese>
+            <French>Contrôle l'affichage des effets d'huile de droïde.</French>
+            <Russian>Управляет отображением эффектов масла дроидов.</Russian>
+            <Portuguese>Controla a exibição dos efeitos do óleo de andróide.</Portuguese>
+            <Chinese>控制droid油效果的显示</Chinese>
+            <Italian>Controlla la visualizzazione degli effetti dell'olio di droide.</Italian>
+            <Czech>Řídí zobrazení efektů droidního oleje.</Czech>
+            <Polish>Steruje wyświetlaniem efektów oleju droidów.</Polish>
+            <Spanish>Controla la visualización de los efectos del aceite de droides</Spanish>
+            <Turkish>Droid yağ etkilerinin görüntülenmesini kontrol eder.</Turkish>
+            <German>Steuert die Anzeige von Droidenöleffekten.</German>
+        </Key>
     </Package>
 </Project>

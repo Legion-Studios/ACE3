@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_medical_status"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Glowbal","Sickboy","commy2"};
+        authors[] = {"Glowbal","Sickboy","commy2","Crimzonkat"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

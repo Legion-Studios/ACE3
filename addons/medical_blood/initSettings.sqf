@@ -25,3 +25,12 @@
     [1, 3600, 900],
     true
 ] call CBA_settings_fnc_init;
+
+[
+    QGVAR(oilEnabled),
+    "CHECKBOX",
+    [LSTRING(OilEnabled_DisplayName), LSTRING(OilEnabled_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory)],
+    true,
+    true
+] call CBA_settings_fnc_init;

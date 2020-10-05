@@ -20,3 +20,6 @@
 #define BLOOD_DISABLED     0
 #define BLOOD_ONLY_PLAYERS 1
 #define BLOOD_ENABLED      2
+
+#define OIL_DISABLED 0
+#define OIL_ENABLED 1

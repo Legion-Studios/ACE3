@@ -26,15 +26,35 @@ params ["_unit", "_direction", "_damage"];
 private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
 private _offset = OFFSET + _distanceBetweenDrops;
 private _position = _unit getPos [_offset, _direction];
+private _unitType = toLower(configName (configFile >> "CfgVehicles" >> typeof _unit));
 
-["blooddrop_2", _position, _direction] call FUNC(createBlood);
+if(["droid", _unitType] call BIS_fnc_inString) then 
+{
+    if(GVAR(oilEnabled)) then {
+        ["oildrop_2", _position, _direction] call FUNC(createBlood);
 
-private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
-TRACE_2("Spurting blood",_dropAmount,_damage);
+        private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
+        TRACE_2("Spurting blood",_dropAmount,_damage);
 
-if (_dropAmount > 1) then {
-    for "_i" from 2 to _dropAmount do {
-        _position = _position getPos [_distanceBetweenDrops, _direction];
-        ["blooddrop_1", _position, _direction] call FUNC(createBlood);
+        if (_dropAmount > 1) then {
+            for "_i" from 2 to _dropAmount do {
+                _position = _position getPos [_distanceBetweenDrops, _direction];
+                ["oildrop_1", _position, _direction] call FUNC(createBlood);
+            };
+        };
+    };
+} else {
+    ["blooddrop_2", _position, _direction] call FUNC(createBlood);
+
+    private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
+    TRACE_2("Spurting blood",_dropAmount,_damage);
+
+    if (_dropAmount > 1) then {
+        for "_i" from 2 to _dropAmount do {
+            _position = _position getPos [_distanceBetweenDrops, _direction];
+            ["blooddrop_1", _position, _direction] call FUNC(createBlood);
+        };
     };
 };
+
+

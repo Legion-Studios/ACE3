@@ -20,6 +20,9 @@ params ["_unit"];
 
 // Nothing to do if unit is not bleeding
 if !(_unit call FUNC(isBleeding)) exitWith {};
+// Declare unit type check
+private _unitType = toLower(configName (configFile >> "CfgVehicles" >> typeof _unit));
+
 
 // Don't bleed on the ground if in a vehicle
 if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
@@ -34,6 +37,13 @@ if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
     _position = _position vectorAdd [random 0.4 - 0.2, random 0.4 - 0.2, 0];
     _position set [2, 0];
 
-    private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
+    if(["droid", _unitType] call BIS_fnc_inString) then {
+        if(GVAR(oilEnabled)) then {
+            private _bloodDrop = ["oildrop_1", "oildrop_2", "oildrop_3", "oildrop_4"] select floor (_bloodLoss min 3);
+        };
+    } else {
+        private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
+    };
+    
     [_bloodDrop, _position] call FUNC(createBlood);
 };

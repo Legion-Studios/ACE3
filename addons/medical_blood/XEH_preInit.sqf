@@ -25,7 +25,12 @@ GVAR(models) = [] call CBA_fnc_createNamespace;
     ["blooddrop_1", QPATHTOF(data\ace_drop_1.p3d)],
     ["blooddrop_2", QPATHTOF(data\ace_drop_2.p3d)],
     ["blooddrop_3", QPATHTOF(data\ace_drop_3.p3d)],
-    ["blooddrop_4", QPATHTOF(data\ace_drop_4.p3d)]
+    ["blooddrop_4", QPATHTOF(data\ace_drop_4.p3d)],
+    ["oildrop_1", QPATHTOF(data\ace_droiddrop_1.p3d)],
+    ["oildrop_2", QPATHTOF(data\ace_droiddrop_2.p3d)],
+    ["oildrop_3", QPATHTOF(data\ace_droiddrop_3.p3d)],
+    ["oildrop_4", QPATHTOF(data\ace_droiddrop_4.p3d)]
+
 ];
 
 ADDON = true;
